@@ -20,7 +20,7 @@ def welcome_assignment_answers(question):
     elif question == "What layer of the TCP/IP model does the protocol DNS belong to? - The answer should be an integer number":
         answer = 5
     elif question == "What layer of the TCP/IP model does the protocol ICMP belong to? - The answer should be an integer number":
-        answer = 3
+        answer = 2
     elif question == "In Slack, what is the secret passphrase posted in the #lab-python-getting-started channel posted by a TA?":
         answer = "pcap"
 
