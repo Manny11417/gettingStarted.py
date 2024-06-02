@@ -21,7 +21,7 @@ def welcome_assignment_answers(question):
         answer = 5
     elif question == "What layer of the TCP/IP model does the protocol ICMP belong to? - The answer should be an integer number":
         answer = 3
-    elif question == "In Slack, what is the secret passphrase posted in the lab-python-getting-started channel posted by a TA?":
+    elif question == "In Slack, what is the secret passphrase posted in the #lab-python-getting-started channel posted by a TA?":
         answer = "PCAP"
 
     else: 
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     print(welcome_assignment_answers(debug_question))
 
 #Questions:
-#"In Slack, what is the secret passphrase posted in the #lab-python-getting-started channel posted by a TA?": “pcap”.
+#"In Slack, what is the secret passphrase posted in the #lab-python-getting-started channel posted by a TA?":
 #"Are encoding and encryption the same? - Yes/No":
 #"Is it possible to decrypt a message without a key? - Yes/No":
 #"Is it possible to decode a message without a key? - Yes/No":
