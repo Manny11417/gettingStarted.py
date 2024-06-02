@@ -13,7 +13,7 @@ def welcome_assignment_answers(question):
         answer = "Yes"
     elif question == "Is a hashed message supposed to be un-hashed? - Yes/No":
         answer = "No"
-    #elif question == "What is the SHA256 hashing value of your NYU email and use the answer in your code":
+    elif question == "What is the SHA256 hashing value of your NYU email and use the answer in your code":
         answer = "88fa508221503ca5d325112f5d3e1242fcbc4cee793637ad256ec40de106c2c6"
     elif question == "Is MD5 a secured hashing algorithm? - Yes/No":
         answer = "No"
@@ -21,7 +21,7 @@ def welcome_assignment_answers(question):
         answer = 5
     elif question == "What layer of the TCP/IP model does the protocol ICMP belong to? - The answer should be an integer number":
         answer = 3
-    elif question == "In Slack, what is the secret passphrase posted in the #lab-python-getting-started channel posted by a TA?":
+    elif question == "In Slack, what is the secret passphrase posted in the #lab-python-getting-started channel posted by a TA":
         answer = "pcap"
 
     else: 
