@@ -23,6 +23,8 @@ def webServer(port=13331):
             
             # Open the client requested file
             f = open(filename[1:], 'rb')
+            outputdata = f.read()
+            f.close()
             
             # Create a header for a valid response (200 OK)
             header = "HTTP/1.1 200 OK\r\n"
@@ -34,12 +36,8 @@ def webServer(port=13331):
             # Send the header
             connectionSocket.send(header.encode())
             
-            # Read the file and send its content
-            outputdata = f.read()
+            # Send the body (file content)
             connectionSocket.send(outputdata)
-            
-            # Close the file
-            f.close()
             
             # Close the connection socket
             connectionSocket.close()
