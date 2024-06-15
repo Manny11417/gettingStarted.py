@@ -16,13 +16,14 @@ def webServer(port=13331):
         connectionSocket, addr = serverSocket.accept()
         
         try:
-            message = connectionSocket.recv(1024).decode()  # Receiving message from the client
+            # Receive the message from the client
+            message = connectionSocket.recv(1024).decode()
             filename = message.split()[1]
             
             # Open the client requested file
             f = open(filename[1:], 'rb')
             
-            # Create a header for a valid response
+            # Create a header for a valid response (200 OK)
             header = "HTTP/1.1 200 OK\r\n"
             header += "Server: MySimpleWebServer\r\n"
             header += "Content-Type: text/html; charset=UTF-8\r\n"
