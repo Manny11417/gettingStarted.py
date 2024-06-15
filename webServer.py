@@ -22,9 +22,8 @@ def webServer(port=13331):
             filename = message.split()[1]
             
             # Open the client requested file
-            f = open(filename[1:], 'rb')
-            outputdata = f.read()
-            f.close()
+            with open(filename[1:], 'rb') as f:
+                outputdata = f.read()
             
             # Create a header for a valid response (200 OK)
             header = "HTTP/1.1 200 OK\r\n"
@@ -35,9 +34,11 @@ def webServer(port=13331):
             
             # Send the header
             connectionSocket.send(header.encode())
+            print(f"Header sent: {header}")
             
             # Send the body (file content)
             connectionSocket.send(outputdata)
+            print(f"Body sent: {outputdata}")
             
             # Close the connection socket
             connectionSocket.close()
@@ -54,6 +55,8 @@ def webServer(port=13331):
             # Send the header and the body
             connectionSocket.send(header.encode())
             connectionSocket.send(body.encode())
+            print(f"404 Header sent: {header}")
+            print(f"404 Body sent: {body}")
             
             # Close the connection socket
             connectionSocket.close()
