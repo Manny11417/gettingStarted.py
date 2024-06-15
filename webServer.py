@@ -18,6 +18,7 @@ def webServer(port=13331):
         try:
             # Receive the message from the client
             message = connectionSocket.recv(1024).decode()
+            print(f"Message received: {message}")
             filename = message.split()[1]
             
             # Open the client requested file
