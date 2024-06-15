@@ -38,7 +38,7 @@ def webServer(port=13331):
             
             # Send the body (file content)
             connectionSocket.send(outputdata)
-            print(f"Body sent: {outputdata}")
+            print(f"Body sent: {outputdata.decode()}")
             
             # Close the connection socket
             connectionSocket.close()
