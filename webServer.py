@@ -28,6 +28,7 @@ def webServer(port=13331):
             header = "HTTP/1.1 200 OK\r\n"
             header += "Server: MySimpleWebServer\r\n"
             header += "Content-Type: text/html; charset=UTF-8\r\n"
+            header += "Connection: close\r\n"
             header += "\r\n"
             
             # Send the header
@@ -48,6 +49,7 @@ def webServer(port=13331):
             header = "HTTP/1.1 404 Not Found\r\n"
             header += "Server: MySimpleWebServer\r\n"
             header += "Content-Type: text/html; charset=UTF-8\r\n"
+            header += "Connection: close\r\n"
             header += "\r\n"
             body = "<html><head><title>404 Not Found</title></head><body><h1>404 Not Found</h1></body></html>"
             
